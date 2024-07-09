@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJ Health 로그인</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <!-- Firebase SDK 추가 -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBcqI5juIUtjHT3GcVfDIvanNQUFS5S5Jo",
+            authDomain: "cj-project-da850.firebaseapp.com",
+            databaseURL: "https://cj-project-da850-default-rtdb.firebaseio.com",
+            projectId: "cj-project-da850",
+            storageBucket: "cj-project-da850.appspot.com",
+            messagingSenderId: "574274568290",
+            appId: "1:574274568290:web:3f90f1caa04dacbd42d13b",
+            measurementId: "G-WCDJM6KSMT"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="top-bar"></div>
+        <div class="header-top-links">
+            <a href="login.html">로그인</a>
+            <a href="mypage.html">마이페이지</a>
+            <a href="customer_service.html">고객센터</a>
+        </div>
+        <div class="header-main">
+            <img src="logo.png" alt="CJ Health 로고" class="logo">
+        </div>
+        <nav class="header-bottom-links">
+            <a href="heart_rate.html">심장 박동수</a>
+            <a href="working_hours.html">근무 시간</a>
+            <a href="hospital_reservation.html">병원 예약</a>
+        </nav>
+    </header>
+    <main>
+        <div class="login-container">
+            <div class="login-tabs">
+                <button class="active" onclick="showLoginForm('id-login')">ID 로그인</button>
+                <button onclick="showLoginForm('bio-login')">생체 인식 로그인</button>
+            </div>
+            <form id="id-login" class="login-form">
+                <input type="text" id="login-username" name="login-username" placeholder="아이디를 입력하시오" required>
+                
+                <input type="password" id="login-password" name="login-password" placeholder="비밀번호를 입력하시오" required>
+
+                <div class="error-message" id="id-login-error">비밀번호 입력이 필요합니다</div>
+
+                <button type="submit">로그인</button>
+            </form>
+            <form id="bio-login" class="login-form" style="display:none;">
+                <p><span class="highlight">모바일 CJ 헬스</span> 앱에 <span class="highlight">얼굴 또는 지문이 등록</span>되어 있어야 이용 가능합니다</p>
+                <p>주민등록번호 입력 후 <span class="highlight">[인증 요청]</span> 버튼을 누르면, 스마트폰으로 <span class="highlight">알림문자</span>가 전송됩니다</p>
+                <p>알림문자를 누르면 <span class="highlight">앱을 통한 생체 인식</span>을 할 수 있습니다</p>
+                <label for="resident-registration-number">주민등록번호</label>
+                <input type="text" id="resident-registration-number" name="resident-registration-number" placeholder="주민등록번호를 입력하시오" required>
+                <button type="submit">인증 요청</button>
+            </form>
+            <div class="login-links">
+                <a href="#">아이디 찾기</a>
+                <a href="#">비밀번호 찾기</a>
+                <a href="#">회원 가입</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
