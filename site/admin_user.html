@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유저 관리</title>
+    <link rel="stylesheet" href="admin_user.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="CJ Health Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">근무자 건강 관리</a></li>
+                    <li><a href="#">유지 관리</a></li>
+                    <li><a href="#">신고 내역</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <a href="#">회원명</a> |
+                <a href="#">마이페이지</a> |
+                <a href="#">로그아웃</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="user-management">
+            <div class="search-bar">
+                <input type="text" placeholder="검색">
+                <button type="button">검색</button>
+            </div>
+            <div class="date-filter">
+                <input type="date"> ~ <input type="date">
+            </div>
+            <div class="sort-buttons">
+                <button type="button">정렬</button>
+                <button type="button">이름</button>
+                <button type="button">근무지</button>
+                <button type="button">위험도</button>
+            </div>
+        </section>
+        <section class="user-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>이름</th>
+                        <th>전화 번호</th>
+                        <th>아이디</th>
+                        <th>생년월일</th>
+                        <th>역할</th>
+                        <th>임계치</th>
+                        <th>심박수</th>
+                        <th>위험도</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>노*희</td>
+                        <td>010-****-****</td>
+                        <td>user****</td>
+                        <td>****-**-**</td>
+                        <td>
+                            <select>
+                                <option value="admin">관리자</option>
+                                <option value="user">일반</option>
+                            </select>
+                        </td>
+                        <td>기준치</td>
+                        <td>80</td>
+                        <td>낮음</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>고객 센터</p>
+    </footer>
+    <script src="admin_user.js"></script>
+</body>
+</html>
