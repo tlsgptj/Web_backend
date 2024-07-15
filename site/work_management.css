@@ -1,0 +1,414 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans HK', sans-serif;
+    background-color: #F7F8FA;
+}
+
+.top-bar {
+    background-color: #006ECD;
+    height: 27px;
+}
+
+.header-top-links {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.header-top-links a {
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.header-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: white;
+}
+
+header .logo {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.header-bottom-links {
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.header-bottom-links a {
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: calc(100vh - 140px);
+}
+
+.work-management-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #F7F8FA;
+}
+
+.member-name, .menu-item, .divider, .mypage, .logout, .status-text, .work-progress-text, .weekly-stress-index, .recent-time, .weekly-stress-index, .daily-work-time, .high-stress, .low-stress, .time-value, .health-tip-title, .health-tip-text, .customer-service {
+    position: absolute;
+    font-family: 'Noto Sans HK', sans-serif;
+    word-wrap: break-word;
+}
+
+.member-name {
+    left: 1078px;
+    top: 48px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.menu-item {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.menu-item.active {
+    left: 134px;
+    top: 147px;
+}
+
+.menu-item.inactive {
+    color: #ACADB9;
+}
+
+.menu-item.inactive:first-of-type {
+    left: 134px;
+    top: 147px;
+}
+
+.menu-item.inactive:nth-of-type(2) {
+    left: 348px;
+    top: 147px;
+}
+
+.menu-item:nth-of-type(2) {
+    left: 250px;
+    top: 147px;
+}
+
+.divider {
+    top: 48px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.divider:first-of-type {
+    left: 1132px;
+}
+
+.divider:nth-of-type(2) {
+    left: 1235px;
+}
+
+.mypage {
+    left: 1148px;
+    top: 48px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.logout {
+    left: 1263px;
+    top: 48px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.blue-bar {
+    width: 1440px;
+    height: 27px;
+    position: absolute;
+    background: #006ECD;
+    left: 0;
+    top: 0;
+}
+
+.content-box {
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+}
+
+.content-box.left {
+    width: 537px;
+    height: 539px;
+    left: 146px;
+    top: 272px;
+}
+
+.content-box.right {
+    width: 524px;
+    height: 539px;
+    left: 798px;
+    top: 272px;
+}
+
+.status-text {
+    left: 847px;
+    top: 720px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.work-progress-text {
+    left: 217px;
+    top: 699px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.progress-bar {
+    width: 349.5px;
+    height: 22px;
+    left: 884px;
+    top: 466.5px;
+    position: absolute;
+    border: 1px solid #FF9700;
+}
+
+.weekly-stress-index {
+    left: 881px;
+    top: 297px;
+    color: black;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.stress-bar {
+    width: 42px;
+    height: 397px;
+    left: 847px;
+    top: 695px;
+    position: absolute;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    background: linear-gradient(180deg, #6BEA68 0%, #FFE16C 56%, #EF151E 100%);
+    border-radius: 30px;
+}
+
+.recent-time {
+    left: 858px;
+    top: 616px;
+    opacity: 0.40;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.status-dot {
+    width: 26px;
+    height: 26px;
+    left: 847px;
+    top: 305px;
+    position: absolute;
+    background: #6BEA68;
+}
+
+.black-divider {
+    width: 1440px;
+    height: 0;
+    position: absolute;
+    border: 1px solid black;
+    left: 0;
+    top: 199.5px;
+}
+
+.circle {
+    width: 298px;
+    height: 298px;
+    left: 187px;
+    top: 355px;
+    position: absolute;
+    background: #F2F2F2;
+    border-radius: 50%;
+}
+
+.work-hours {
+    left: 529px;
+    top: 586px;
+    color: black;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.work-hours-value {
+    left: 507px;
+    top: 586px;
+    color: black;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.rotate-img {
+    width: 298px;
+    height: 149px;
+    left: 335.62px;
+    top: 653.31px;
+    position: absolute;
+    transform: rotate(-90.12deg);
+    transform-origin: 0 0;
+}
+
+.daily-work-time {
+    left: 224px;
+    top: 297px;
+    color: black;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.large-content-box {
+    width: 1178px;
+    height: 242px;
+    left: 152px;
+    top: 860px;
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+}
+
+.high-stress {
+    left: 1259.5px;
+    top: 364px;
+    color: #EF151E;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.low-stress {
+    left: 1256.5px;
+    top: 499px;
+    color: #006ECD;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.dot {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.dot.orange {
+    background: #FF9700;
+}
+
+.dot.gray {
+    width: 14px;
+    height: 14px;
+    left: 860px;
+    top: 667px;
+    background: #D9D9D9;
+}
+
+.dot.white {
+    width: 7px;
+    height: 7px;
+    left: 863px;
+    top: 670px;
+    background: white;
+}
+
+.time-value {
+    left: 1225.5px;
+    top: 538px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.small-box {
+    width: 30px;
+    height: 30px;
+    left: 187px;
+    top: 303px;
+    position: absolute;
+    background: #006ECD;
+}
+
+.health-tip-title {
+    left: 203px;
+    top: 868px;
+    color: black;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.health-tip-text {
+    left: 204px;
+    top: 935px;
+    color: black;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.orange-box {
+    width: 18px;
+    height: 26px;
+    left: 174px;
+    top: 888px;
+    position: absolute;
+    background: #FF9700;
+}
+
+.customer-service {
+    left: 1278px;
+    top: 147px;
+    color: #ACADB9;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.logo-container {
+    width: 133.58px;
+    height: 53px;
+    left: 640px;
+    top: 74px;
+    position: absolute;
+}
+
+.logo-img {
+    position: absolute;
+}
+
+.logo-img.small {
+    width: 78.96px;
+    height: 35.15px;
+    left: 54.62px;
+    top: 16.85px;
+}

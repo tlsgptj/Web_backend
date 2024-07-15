@@ -1,0 +1,293 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans HK', sans-serif;
+    background-color: #F7F8FA;
+}
+
+.top-bar {
+    background-color: #006ECD;
+    height: 27px;
+}
+
+.header-top-links {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.header-top-links a {
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.header-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: white;
+}
+
+header .logo {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.header-bottom-links {
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.header-bottom-links a {
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: calc(100vh - 140px);
+}
+
+.heart-rate-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #F7F8FA;
+    padding: 20px;
+}
+
+.member-name, .today-heart-rate, .menu-item, .divider, .mypage, .logout, .weekly-heart-rate, .statistics-evaluation, .max-heart-rate, .min-heart-rate {
+    position: absolute;
+    font-family: Noto Sans HK;
+    word-wrap: break-word;
+}
+
+.member-name {
+    left: 1078px;
+    top: 48px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.today-heart-rate {
+    left: 133px;
+    top: 267px;
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.menu-item {
+    left: 134px;
+    top: 147px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.menu-item:nth-of-type(2) {
+    left: 250px;
+    color: #B3ACB9;
+}
+
+.menu-item:nth-of-type(3) {
+    left: 348px;
+    color: #B3ACB9;
+}
+
+.divider {
+    top: 48px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.divider:nth-of-type(1) {
+    left: 1132px;
+}
+
+.divider:nth-of-type(2) {
+    left: 1235px;
+}
+
+.mypage {
+    left: 1148px;
+    top: 48px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.logout {
+    left: 1263px;
+    top: 48px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.blue-bar {
+    width: 1440px;
+    height: 27px;
+    position: absolute;
+    background: #006ECD;
+    left: 0;
+    top: 0;
+}
+
+.content-box {
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    left: 118px;
+    top: 314px;
+    width: 1173px;
+    height: 418px;
+}
+
+.weekly-heart-rate {
+    left: 133px;
+    top: 781px;
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.statistics-evaluation {
+    left: 133px;
+    top: 1314px;
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.black-divider {
+    width: 1440px;
+    height: 0;
+    position: absolute;
+    border: 1px solid black;
+    left: 0;
+    top: 199.5px;
+}
+
+.bar-chart {
+    position: absolute;
+}
+
+.bar {
+    width: 25px;
+    background: #FF9700;
+    border-radius: 30px;
+    position: absolute;
+    color: black;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    bottom: 0;
+}
+
+.average-heart-rate-box {
+    width: 1173px;
+    height: 204px;
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+    left: 124px;
+    top: 1368px;
+}
+
+.average-heart-rate-text {
+    position: absolute;
+    left: 147px;
+    top: 1401px;
+}
+
+.average-heart-rate-text .text {
+    color: black;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.average-heart-rate-text .highlight {
+    color: #EF151E;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.average-heart-rate-text .subtext {
+    color: black;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.dotted-divider {
+    position: absolute;
+    width: 1083px;
+    height: 0;
+    border-style: dotted;
+}
+
+.dotted-divider.red {
+    border-color: #EF151E;
+    border-width: 2px;
+    left: 207px;
+    top: 346px;
+}
+
+.dotted-divider.blue {
+    border-color: #006ECD;
+    border-width: 2px;
+    left: 214px;
+    top: 614px;
+}
+
+.weekly-statistics .bar {
+    position: absolute;
+    color: black;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.max-heart-rate {
+    left: 153px;
+    top: 333px;
+    color: #EF151E;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.min-heart-rate {
+    left: 153px;
+    top: 598px;
+    color: #006ECD;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.content-box.large {
+    width: 1173px;
+    height: 425px;
+    left: 121px;
+    top: 836px;
+}
