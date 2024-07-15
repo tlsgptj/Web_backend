@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신고 내역</title>
+    <link rel="stylesheet" href="admin_report.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="CJ Health Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">근무자 건강 관리</a></li>
+                    <li><a href="#">유지 관리</a></li>
+                    <li><a href="#">신고 내역</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <a href="#">회원명</a> |
+                <a href="#">마이페이지</a> |
+                <a href="#">로그아웃</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="report-summary">
+            <h2>총 *건의 신고 내역이 있습니다</h2>
+            <p>번호를 클릭하면 자세한 사항을 확인하실 수 있습니다</p>
+        </section>
+        <section class="report-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>신고자</th>
+                        <th>신고 시각</th>
+                        <th>신고 유형</th>
+                        <th>신고 내용</th>
+                        <th>장소</th>
+                        <th>처리 상태</th>
+                        <th>긴급도</th>
+                        <th>재발 여부</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>노*희</td>
+                        <td>14:00</td>
+                        <td>기절</td>
+                        <td>한 남성이 쓰러짐</td>
+                        <td>용산점</td>
+                        <td>입원</td>
+                        <td>높음</td>
+                        <td>낮음</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>고객 센터</p>
+    </footer>
+    <script src="admin_report.js"></script>
+</body>
+</html>
