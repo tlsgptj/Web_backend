@@ -52,6 +52,7 @@ document.getElementById('id-login').addEventListener('submit', function(event) {
               var user = userCredential.user;
               console.log('로그인 성공:', user);
               // 리디렉션 또는 다른 작업 수행
+              
           })
           .catch((error) => {
               var errorCode = error.code;
