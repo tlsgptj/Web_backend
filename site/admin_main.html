@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 웹 메인페이지</title>
+    <link rel="stylesheet" href="admin_main.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="CJ Health Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">근무자 건강 관리</a></li>
+                    <li><a href="#">유저 관리</a></li>
+                    <li><a href="#">신고 내역</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <a href="#">회원명</a> |
+                <a href="#">마이페이지</a> |
+                <a href="#">로그아웃</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="heart-rate">
+            <h2>❤️유저 평균 심박수</h2>
+            <div class="chart">
+                <img src="chart.png" alt="Heart Rate Chart">
+            </div>
+        </section>
+        <section class="abnormal-workers">
+            <h2>이상치 근로자</h2>
+            <div class="worker">
+                <div class="worker-info">
+                    <img src="user-icon.png" alt="User Icon">
+                    <span>근로자 | 이상치 발생 날짜 및 시간 | 증상</span>
+                </div>
+                <div class="worker-detail">
+                    <a href="#">></a>
+                </div>
+            </div>
+            <div class="worker">
+                <div class="worker-info">
+                    <img src="user-icon.png" alt="User Icon">
+                    <span>근로자 | 이상치 발생 날짜 및 시간 | 증상</span>
+                </div>
+                <div class="worker-detail">
+                    <a href="#">></a>
+                </div>
+            </div>
+            <div class="worker">
+                <div class="worker-info">
+                    <img src="user-icon.png" alt="User Icon">
+                    <span>근로자 | 이상치 발생 날짜 및 시간 | 증상</span>
+                </div>
+                <div class="worker-detail">
+                    <a href="#">></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>고객 센터</p>
+    </footer>
+    <script src="admin_main.js"></script>
+</body>
+</html>

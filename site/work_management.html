@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>근무 관리</title>
-    <link rel="stylesheet" href="work_management.css">
+    <title>근무자 건강 관리</title>
+    <link rel="stylesheet" href="admin_main.css">
+    <script defer src="admin_main.js"></script>
 </head>
 <body>
     <header>
@@ -25,11 +26,11 @@
         </nav>
     </header>
     <main>
-        <div class="work-management-container">
+        <div class="admin-main-container">
             <div class="member-name">회원명</div>
             <div class="menu-item active">심장 박동수</div>
-            <div class="menu-item inactive">심장 박동수</div>
-            <div class="menu-item">근무 관리</div>
+            <div class="menu-item inactive">근무 관리</div>
+            <div class="menu-item inactive">신고 내역</div>
             <div class="divider">ㅣ</div>
             <div class="divider">ㅣ</div>
             <div class="mypage">마이페이지</div>
@@ -45,7 +46,6 @@
             <div class="recent-time">최근 오후 14:42</div>
             <div class="status-dot"></div>
             <div class="black-divider"></div>
-            <div class="menu-item inactive">신고 내역</div>
             <div class="circle"></div>
             <div class="work-hours">/8시간</div>
             <div class="work-hours-value">4</div>
@@ -71,7 +71,7 @@
             <div class="time-value">30</div>
             <div class="small-box"></div>
             <div class="health-tip-title">오늘의 건강 팁</div>
-            <div class="health-tip-text">충분한 수분 섭취와 규칙적인 운동을 잊지 마세요!</div>
+            <div class="health-tip-text" id="health-tip-text"></div>
             <div class="orange-box"></div>
             <div class="customer-service">고객 센터</div>
             <div class="logo-container">
