@@ -22,7 +22,6 @@ def listen_for_firebase_changes(path, event_name):
     ref.listen(listener)
 
 
-# Start listeners for different paths
 listen_for_firebase_changes('/path/for/main', 'data_main')
 listen_for_firebase_changes('/path/for/user_report', 'data_user_report')
 listen_for_firebase_changes('/path/for/user', 'data_user')
@@ -85,6 +84,8 @@ def register_user():
     data = request.json
     email = data['email']
     password = data['password']
+    gender = data['gender']
+    
 
     try:
         user = auth.create_user(email=email, password=password)
@@ -96,12 +97,12 @@ def register_user():
 @app.route("/api/login", methods=['POST'])
 def login_user():
     data = request.json
-    email = data['email']
-    password = data['password']
+    id_token = data.get('idToken')
 
     try:
-        user = auth.get_user_by_email(email)
-        return jsonify({'status': 'success', 'uid': user.uid}), 200
+        decoded_token = auth.verify_id_token(id_token)
+        uid = decoded_token['uid']
+        return jsonify({'status': 'success', 'uid': uid}), 200
     except Exception as e:
         return jsonify({'status': 'error', 'message': str(e)}), 400
 
