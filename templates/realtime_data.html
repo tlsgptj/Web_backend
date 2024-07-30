@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-time Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+    <canvas id="myChart" width="400" height="200"></canvas>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [], // Labels for X-axis
+                datasets: [{
+                    label: 'Real-time Data',
+                    data: [], // Data for Y-axis
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'time',
+                        time: {
+                            unit: 'second'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        var socket = io();
+
+        socket.on('data_realtime', function(data) {
+            var parsedData = JSON.parse(data);
+            myChart.data.labels.push(new Date());
+            myChart.data.datasets[0].data.push(parsedData.value);
+            myChart.update();
+        });
+    </script>
+</body>
+</html>
+
+
